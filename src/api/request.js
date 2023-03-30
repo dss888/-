@@ -16,6 +16,7 @@ export function homedate(){
 	
 	})
 }
+//
 export function homedatetwo(){
 	return axios({
 		url:'/homedatetwo',
@@ -176,6 +177,7 @@ export function editorder(data){
 		data
 	})
 }
+//更新
 export function upmember(data){
 	return axios({
 		url:'/upmember',

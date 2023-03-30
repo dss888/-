@@ -19,9 +19,6 @@
 <script>
 import Sidebar from './Sidebar.vue'
 import HomeHeader from './HomeHeader.vue';
-// import ConTent from './ConTent.vue';
-// import ConTentUse from './ConTentUse.vue';
-// import Datasheet from './Datasheet.vue';
 export default {
    components: { Sidebar, HomeHeader },
    methods: {
@@ -66,8 +63,6 @@ html,
 .el-main {
    background-color: rgb(240, 242, 245);
    color: #333;
-   // text-align: center;
-   // line-height: 160px;
    min-width: 1100px;
   
 

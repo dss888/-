@@ -21,10 +21,6 @@
         </div>
         <div class="cd">
           <div>
-            <!-- <el-button plain class="f" @click="selectgradeamount()" :lista="list">查询</el-button> -->
-            <!-- <el-button plain class="f" @click="selectgradeamount()"
-              >查询</el-button
-            > -->
             <el-button plain >查询</el-button>
 
             <el-button plain @click="result()">重置</el-button>
@@ -36,7 +32,6 @@
         <div class="header">
           <div class="boxa">限时折扣活动列表</div>
           <div class="btn">
-            <!-- <Memberfrom @xinzeng="shuaxin"></Memberfrom> -->
             <el-button size="medium">新增</el-button>
 
             <el-button size="medium">批量操作</el-button>
@@ -59,15 +54,12 @@
           <el-table-column type="selection" width="55"></el-table-column>
           <el-table-column type="index" width="50" label="序号">
             <template slot-scope="scope">
-              <!-- 需要写死的每页五条要对应修改 -->
               {{ scope.$index + (page - 1) * size + 1 }}
             </template>
           </el-table-column>
           <el-table-column label="活动名称" prop="activityname" >
           </el-table-column>
           <el-table-column prop="orginalprice" label="原价（元）" width="100px"> </el-table-column>
-          <!-- <el-table-column prop="name" label="会员标签"> -->
-          <!-- </el-table-column> -->
           <el-table-column prop="discountprice" label="折扣价（元）" width="120px"> </el-table-column>
           <el-table-column prop="stock" label="库存" width="80px"> </el-table-column>
           <el-table-column label="活动状态" width="80px" prop="activestate">
@@ -84,20 +76,6 @@
             <!-- eslint-disable -->
            
             <template slot-scope="scope">
-              <!-- <el-button type="text" @click="details()">会员详情</el-button> -->
-              <!-- 引入组件 -->
-              <!-- <el-button type="text" @click="recharge(scope.$index, scope.row)">
-                <RechargeVue
-                  :formLabelAlign="cur"
-                  @chongzhi="shuaxin"
-                ></RechargeVue>
-              </el-button> -->
-              <!-- <el-button type="text" @click="edit(scope.$index, scope.row)">
-                <Integral :formLabelAlign="cur" @xiugai="shuaxin"></Integral>
-              </el-button> -->
-              <!-- <el-button type="text" @click="del(scope.$index, scope.row)"
-                >停用</el-button
-              > -->
             <el-button plain >停用</el-button>
 
             </template>
@@ -125,15 +103,10 @@
      
     </div> -->
   </section>
-  <!-- 会员查询 -->
-  <!-- 会员查询 -->
 </template>
 <script>
 import Breadcrumb from "@/views/home/adminheader/BreadCrumb.vue";
-// import Memberfrom from "@/views/marketing/Memberfrom.vue";
-// import RechargeVue from "@/views/member/memberselect/Recharge.vue";
-// import Integral from "@/views/member/memberselect/Integral.vue";
-// import { selectgrade } from "@/api/request";
+
 import { disc, delmember } from "@/api/request";
 export default {
   data() {
@@ -189,27 +162,7 @@ export default {
         }
       });
     },
-    //查询按钮
-    // selectgradeamount() {
-    //   // console.log(this.value)
-    //   // console.log(this.valuee)
-    //   //查询当前选择的内容
-
-    //   selectgrade({ grade: this.value, numbertime: this.valuee }).then(
-    //     (res) => {
-    //       if (res.data.list !== undefined) {
-    //         if (res.data.list.length > 0) {
-    //           // console.log(res.data.list);
-    //           this.newlist = res.data.list;
-    //         } else {
-    //           this.newlist = [];
-    //         }
-    //       } else {
-    //         this.newlist = [];
-    //       }
-    //     }
-    //   );
-    // },
+    
     handleSelectionChange(val) {
       this.multipleSelection = val;
     },
@@ -232,34 +185,7 @@ export default {
       //
       this.cur = JSON.parse(JSON.stringify(row));
     },
-    //删除当前点击
-    // del(index, row) {
-    //   this.$confirm("是否要删除数据?", "提示", {
-    //     confirmButtonText: "确定",
-    //     cancelButtonText: "取消",
-    //     type: "warning",
-    //   })
-    //     .then(() => {
-    //       delmember({ id: row.id }).then((res) => {
-    //         // this.$message({
-    //         //   type: 'success',
-    //         //   message: '删除成功!',
-    //         //   duration: 1000,
-    //         // });
-    //         this.$message.success("删除成功!");
-    //         this.getdata();
-    //       });
-    //       // this.$router.go(0)
-    //     })
-    //     .catch(() => {
-    //       // this.$message({
-    //       //   type: 'info',
-    //       //   message: '已取消删除',
-    //       //   duration: 1000
-    //       // });
-    //       this.$message.info("已取消删除!");
-    //     });
-    // },
+    
     //2、获取当前点击分页的页数
     getcurrent(a) {
       this.page = a;

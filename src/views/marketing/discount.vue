@@ -21,12 +21,7 @@
         </div>
         <div class="cd">
           <div>
-            <!-- <el-button plain class="f" @click="selectgradeamount()" :lista="list">查询</el-button> -->
-            <!-- <el-button plain class="f" @click="selectgradeamount()"
-              >查询</el-button
-            > -->
             <el-button plain >查询</el-button>
-
             <el-button plain @click="result()">重置</el-button>
           </div>
         </div>

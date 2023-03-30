@@ -1,8 +1,5 @@
 <template>
     <el-row>
-        <!-- <el-col :span="12">
-            <div class="grid-content bg-purple">&nbsp;</div>
-        </el-col> -->
         <el-col :span="24">
             <div class="grid-content bg-purple-light">
                 <i class="el-icon-bell">

@@ -61,14 +61,16 @@
           "
           tooltip-effect="dark"
           style="width: 100%"
+        :row-key="getkeys"
           @selection-change="handleSelectionChange"
+       
           :header-cell-style="{
             background: '#f9f9f9',
             color: '#595859',
             fontWeight: '600',
           }"
         >
-          <el-table-column type="selection" width="55"></el-table-column>
+          <el-table-column type="selection" width="55" :reserve-selection="true"></el-table-column>
           <el-table-column type="index" width="50" label="序号">
             <template slot-scope="scope">
               <!-- 需要写死的每页五条要对应修改 -->
@@ -301,9 +303,19 @@ export default {
         }
       );
     },
+   getkeys(row){
+    return row.membername
+    console.log(row.membername);
+   },
     handleSelectionChange(val) {
-      this.multipleSelection = val;
+    console.log(val);
+      this.multipleSelection = val
+    console.log(this.multipleSelection);
+
+     
+ 
     },
+
     //跳转会员详情
     details() {
       this.isshow = false;

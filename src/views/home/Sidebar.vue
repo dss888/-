@@ -37,10 +37,7 @@ export default {
         console.log(this.$route);
     },
     computed: {
-        // asyncrouter() {
-        //     console.log(this.$store.state.Navdata);
-        //     return this.$store.state.Navdata;
-        // },
+
     },
 };
 </script>
